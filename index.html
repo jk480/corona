@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Covid-19 Tracker</title>
+	
+	<!-- CSS FILE -->
+	<link rel="stylesheet" href="./styles/style.css">
+
+	<!-- JS FILES -->
+	<script defer src="./js/index.js"></script> 
+
+	<!-- CHART JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- FONT AWESOME -->
+	<script src="https://kit.fontawesome.com/4f450fd234.js" crossorigin="anonymous"></script>
+
+	<!-- TAB ICON -->
+	<link rel="icon" href="./images/virus.ico">
+
+</head>
+<body>
+	<header class="main-header">
+		<div href="#main-section" class="navbar-logo">
+			<h1>C<img src="./images/virus.png" class="img-fluid" alt="">VID-19</h1>
+		</div>
+	</header>
+	<div class="container">
+		<section id="main-section" class="main-section">
+			<h4 class="text-center text-muted"><i>Live statistics  for india by JAY SHARMA</i></h4>
+			<div class="row">
+				<div class="col-lg">
+					<div class="kartica rounded-bottom kartica-b">
+						<div class="kartica-kontejner">
+							<h6 class="card-subtitle">Infected</h6>
+							<h4 id="infected" class="card-title"></h5>
+							<h6 class="text-muted update">Date</h6>
+							<h5 class="kartica-text">Number of active cases of COVID-19</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg">
+					<div class="kartica rounded-bottom kartica-g">
+						<div class="kartica-kontejner">
+							<h6 class="card-subtitle">Recovered</h6>
+							<h4 id="recovered" class="card-title"></h5>
+							<h6 class="text-muted update">Date</h6>
+							<h5 class="kartica-text">Number of recoveries from COVID-19</h5>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg">
+					<div class="kartica rounded-bottom kartica-r">
+						<div class="kartica-kontejner">
+							<h6 class="card-subtitle">Deaths</h6>
+							<h4 id="deaths" class="card-title"></h5>
+							<h6 class="text-muted update">Date</h6>
+							<h5 class="kartica-text">Number of deaths caused by COVID-19</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- CHART -->
+			<div class="chart-container">
+				<div class="row">
+					<div class="col-md">
+						<div class="card">
+							<div class="card-body">
+								<p class="text-center">Global</p>
+								<canvas id="globalChart"></canvas>
+							</div>
+						</div>
+					</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- STAY HOME SUBPART -->
+<!-- 	<div class="container-fluid"> -->
+		<section class="stay-home">
+			<h2 class="text-center text-danger">#StayHome</h2>
+		</section>
+<!-- 	</div> -->
+
+	<!-- HELP CARDS -->
+	<div class="container">
+		<section class="safety">
+			<h2 class="text-center">How to protect yourself and people around you</h1>
+			<div class="row">
+			  
+			  <div class="col-sm">
+			  	<div class="kartica rounded-bottom">
+			  		<div class="kartica-kontejner stay-safe">
+				  		<i class="fas fa-hands-wash"></i>
+				  		<div class="left-margin">
+					  		<h5 class="card-title">Wash your hands frequently</h5>
+					  		<p class="card-subtitle">Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water.</p>
+					  	</div>
+				  	</div>
+			  	</div>
+			  </div>
+			  
+			  <div class="col-sm">
+	  	  	<div class="kartica rounded-bottom">
+	  	  		<div class="kartica-kontejner stay-safe">
+	  		  		<i class="fas fa-people-arrows"></i>
+	  		  		<div class="left-margin">
+					  		<h5 class="card-title">Maintain social distancing</h5>
+					  		<p class="card-subtitle">Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing.</p>
+					  	</div>
+	  		  	</div>
+	  	  	</div>
+			  </div>
+	      
+	      <div class="w-100"></div>
+			  
+			  <div class="col-sm">
+			  	<div class="kartica rounded-bottom">
+	  	  		<div class="kartica-kontejner stay-safe">
+	  		  		<i class="fas fa-virus"></i>
+	  		  		<div class="left-margin">
+					  		<h5 class="card-title">Don't touch your face</h5>
+					  		<p class="card-subtitle">Hands touch many surfaces and can pick up viruses. From there, the virus can enter your body and can make you sick.</p>
+					  	</div>
+	  		  	</div>
+	  	  	</div>
+			  </div>
+		    
+		    <div class="col-sm">
+		    	<div class="kartica rounded-bottom">
+	  	  		<div class="kartica-kontejner stay-safe">
+	  		  		<i class="fas fa-clinic-medical"></i>
+	  		  		<div class="left-margin">
+					  		<h5 class="card-title">If you feel sick, seek medicine care early</h5>
+					  		<p class="card-subtitle">Stay home if you feel unwell. Seek medical attention and call. Follow the directions of your local health authority.</p>
+					  	</div>
+	  		  	</div>
+	  	  	</div>
+		    </div>
+				
+				<div class="w-100"></div>
+
+			  <div class="col-sm">
+			  	<div class="kartica rounded-bottom">
+	  	  		<div class="kartica-kontejner stay-safe">
+	  		  		<i class="fas fa-head-side-mask"></i>
+	  		  		<div class="left-margin">
+					  		<h5 class="card-title">Weark mask</h5>
+					  		<p class="card-subtitle">You could spread virus to others even if you do not feel sick. Wear a wear a mask when you have to go out in public.</p>
+					  	</div>
+	  		  	</div>
+	  	  	</div>
+			  </div>
+
+			  <div class="col-sm">
+			  	<div class="kartica rounded-bottom">
+	  	  		<div class="kartica-kontejner stay-safe">
+	  		  		<i class="fas fa-head-side-cough-slash"></i>
+	  		  		<div class="left-margin">
+					  		<h5 class="card-title">Cover coughs and sneezes</h5>
+					  		<p class="card-subtitle">If you are in a private setting and do not have on your face mask, remember to always cover your mouth and nose.</p>
+					  	</div>
+	  		  	</div>
+	  	  	</div>
+			  </div>
+
+			</div>
+		</section>
+	</div>
+
+	<!-- SYMPTONS -->
+	<div class="container">
+		<section class="safety">
+			<h2 class="text-center">Symptons</h2>
+
+			<div class="row">
+				<div class="col-md">
+					<div class="card">
+						<div class="card-body" style="margin: 0 auto;">
+							<h5>Common symptons:</h5>
+							<ul style="list-style-position: inside;">
+								<li>tiredness</li>
+								<li>fever</li>
+								<li>dry cough</li>
+							</ul>
+
+							<h5>Some people may experience:</h5>
+							<ul style="list-style-position: inside;">
+								<li>aches and pain</li>
+								<li>nasal congestion</li>
+								<li>runny nose</li>
+								<li>sore throat</li>
+								<li>diarrhoea</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div id="mobile-margin" class="col-md">
+					<!-- <div class="card">
+						<div class="card-body"> -->
+							<h5 class="text-justify">On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.
+							People with mild symptoms who are otherwise healthy should self-isolate. Seek medical attention if you have a fever, a cough, and difficulty breathing.</h5>
+
+								</div>
+							</div>
+						<!-- </div>
+					</div> -->
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<!-- FOOTER -->	
+	<footer class="main-footer">
+		<div class="container">
+			<h5 class="text-center">&copy 2020 <a href=""</a>JAY SHARMA</h5>
+		</div>
+	</footer>
+
+
+	<!-- BOOTSTRAP JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<body id="body" style="background-color:white">
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+/* header and custom utilities*/
+.main-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*margin-bottom: 1rem;*/
+}
+
+.main-header h1 {
+	font-size: 5rem;
+	user-select: none;
+}
+
+.main-header img {
+	width: 70px;
+	height: 70px;
+/*	margin-left: .8rem;*/
+	margin-bottom: 15px;
+	transition: 0.7s ease;
+}
+
+.main-header img:hover {
+	transform: rotate(360deg);
+}
+
+.navbar-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .7rem;
+}
+
+a:hover {
+	text-decoration: none !important;
+}
+
+/*custom cards*/
+.kartica {
+	width: 100%;
+	min-height: 100px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+  border-bottom: 7px solid;
+}
+
+.kartica-r {
+	border-color: var(--red);
+}
+
+.kartica-g {
+	border-color: var(--green);
+}
+
+.kartica-b {
+	border-color: var(--blue);
+}
+
+.kartica:hover {
+	transform: scale(1.03);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+.kartica-text {
+	max-width: 300px;
+}
+
+.kartica-kontejner {
+	padding: 20px 18px;
+}
+/* -------------------------------- */
+/* first section with cards and main graph */
+.row {
+	margin: 2rem 0;
+}
+
+/* chart */
+.chart-container {
+	margin: 3rem 0;
+}
+
+/* StayHome section */
+.stay-home {
+	/*background-color: var(--dark);*/
+	color: black;
+	margin: 4rem 0;
+/*	display: flex;
+	align-items: center;*/
+}
+
+.stay-home h2 {
+	padding: 1.5rem;
+	border-top: 1px solid var(--secondary);
+	border-bottom: 1px solid var(--secondary);
+}
+
+/* Safety Measures */
+.safety h2 {
+	margin-bottom: 2rem;
+
+}
+
+.safety .kartica {
+	margin-bottom: 2rem;
+}
+
+/* safety measures cards */
+.stay-safe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stay-safe i {
+	font-size: 3rem;
+	color: var(--red);
+}
+
+.left-margin {
+	margin-left: .7rem;
+}
+
+/* footer */
+
+
+
+@media (max-width: 800px) {
+	.main-header h1 {
+		font-size: 3rem;
+	}
+
+	.main-header img {
+		margin-bottom: 10px;
+	}
+
+	.main-section .kartica {
+		margin-bottom: 1.5rem;
+	}	
+
+	#mobile-margin {
+		margin-top: 1.5rem;
+	}
+}
